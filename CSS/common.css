@@ -1,0 +1,12 @@
+.swal-button {
+  background-color: #0069ff;
+}
+.swal-button:hover {
+  background-color: #0069ff;
+}
+.swal-icon {
+  filter: saturate(5);
+}
+input {
+  padding: 10px;
+}

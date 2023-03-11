@@ -112,19 +112,20 @@ async function deletefun(id) {
     let res = await fetch(
       `https://impossible-pear-waistcoat.cyclic.app/delete`,
       {
-        method: "DELETE",
         headers: {
           "Content-Type": "application/json",
+          collection: collection,
         },
-        body: {
-          email: collection,
-          id: id,
-        },
+        method: "DELETE",
+        body: JSON.stringify({ email: collection, id }),
       }
     );
     if (res.ok) {
       spinner.style.display = "none"; //!Spinner
       swal("Event Deleted Successfully", "Your event has been Deleted", "info");
+      setTimeout(() => {
+        window.location.href = "";
+      }, 2000);
     } else {
       swal("Something Went Wrong", "", "error");
       spinner.style.display = "none"; //!Spinner

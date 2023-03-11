@@ -81,13 +81,18 @@ let login_user = async (obj) => {
     }
   );
   if (res.ok) {
-    let token = await res.json();
-    console.log(token);
-    localStorage.setItem("accessToken", token.token);
-    localStorage.setItem("username", token.name);
-    localStorage.setItem("collecton_name", token.email);
+    let LoginData = await res.json();
+    if (LoginData.msg == "Login failed") {
+      swal("Login Failed", "Wrong Credentials", "error");
+      spinner.style.display = "none"; //!Spinner
+      return;
+    }
 
-    if (token.token) {
+    localStorage.setItem("accessToken", LoginData.token);
+    localStorage.setItem("username", LoginData.name);
+    localStorage.setItem("collecton_name", LoginData.email);
+
+    if (LoginData.token) {
       spinner.style.display = "none"; //!Spinner
       swal("Login Successful", "Redirecting to Dashboard...", "success");
       setTimeout(() => {

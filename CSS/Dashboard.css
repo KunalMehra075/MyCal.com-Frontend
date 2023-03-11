@@ -11,7 +11,7 @@
   align-items: center;
 }
 body {
-  margin-bottom: 100px;
+  margin-bottom: 200px !important;
 }
 img {
   cursor: pointer;
@@ -175,15 +175,7 @@ a {
 #topBody > div:nth-child(2) > div:nth-child(2) > img {
   width: 100%;
 }
-.swal-button {
-  background-color: #0069ff;
-}
-.swal-button:hover {
-  background-color: #0069ff;
-}
-.swal-icon {
-  filter: saturate(5);
-}
+
 .Deleter {
   background-color: #0069ff;
   padding: 0.7rem 1rem;

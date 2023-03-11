@@ -58,17 +58,15 @@ for (let i = 0; i < nextbuttons.length; i++) {
     if (event_data.ok) {
       spinner.style.display = "none"; //!Spinner
       swal("Event Created!", "Your Event has been Scheduled.", "success");
-      window.location.assign("./Dashboard.html");
+      localStorage.setItem("testObject", JSON.stringify(obj));
+      setTimeout(() => {
+        spinner.style.display = "none"; //!Spinner
+        window.location.assign("./Dashboard.html");
+      }, 1000);
     } else {
       spinner.style.display = "none"; //!Spinner
       swal("Bad Request!", "Something was wrong", "error");
-      // alert("Bad request has been made");
     }
-    localStorage.setItem("testObject", JSON.stringify(obj));
-    setTimeout(() => {
-      spinner.style.display = "none"; //!Spinner
-      window.location.assign("./Dashboard.html");
-    }, 500);
   });
 }
 for (let i = 0; i < cancelbutton.length; i++) {

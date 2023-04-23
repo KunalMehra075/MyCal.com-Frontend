@@ -1,13 +1,19 @@
 .swal-button {
-  background-color: #0069ff;
+  background-color: #0069ff !important;
 }
 .swal-button:hover {
-  background-color: #0069ff;
+  background-color: #1d79bb !important;
 }
-.swal-icon {
-  filter: saturate(5);
+.swal-modal * {
+  filter: saturate(1) !important;
 }
-
+.swal-title {
+  color: black !important;
+  font-weight: 500 !important;
+}
+.swal-button {
+  border-radius: 2px !important;
+}
 input {
   padding: 10px;
 }

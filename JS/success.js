@@ -1,4 +1,3 @@
-localStorage.setItem("OrangeGoogleAuth", true);
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
@@ -20,8 +19,6 @@ if (params.successId) {
 
     }
 }
-
-
 async function GoogleLoginFunction(id) {
     let baseURL = "https://my-cal-com-backend.vercel.app";
     try {
@@ -44,7 +41,7 @@ async function GoogleLoginFunction(id) {
             localStorage.setItem("collecton_name", response.user.email);
             swal("Login Successful!", "You are logged in, Lets Explore!", "success");
             setTimeout(() => {
-                window.location.href = "index.html";
+                window.location.href = "Dashboard.html";
             }, 2000);
         }
     } catch (error) {

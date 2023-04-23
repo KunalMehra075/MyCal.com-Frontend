@@ -7,6 +7,14 @@
 .swal-icon {
   filter: saturate(5);
 }
+
 input {
   padding: 10px;
+}
+#spaceNav {
+  display: none;
+  width: 100%;
+  z-index: 100000;
+  background-color: red;
+  height: 100px;
 }

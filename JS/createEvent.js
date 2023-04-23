@@ -1,4 +1,6 @@
 var navbar = document.getElementById("event_nav");
+let EventBaseURL = `https://my-cal-com-backend.vercel.app`
+
 var sticky = navbar.offsetTop;
 window.onscroll = function () {
   if (window.pageYOffset >= sticky) {
@@ -9,6 +11,7 @@ window.onscroll = function () {
 };
 const cancelbutton = document.querySelectorAll(".cancelbutton");
 const nextbuttons = document.querySelectorAll(".nextbutton");
+
 const event_name = document.getElementById("event_name");
 const event_option = document.getElementById("event_option");
 const event_description = document.getElementById("event_description");
@@ -35,34 +38,31 @@ for (let i = 0; i < nextbuttons.length; i++) {
       discription: event_description.value,
       event_link: event_link.value,
     };
-
-    let event_data = await fetch(
-      "https://impossible-pear-waistcoat.cyclic.app/newevent",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          collection: collection,
-        },
-        body: JSON.stringify(obj),
-      }
+    console.log(obj);
+    let response = await fetch(`${EventBaseURL}/events/newevent`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        collection: collection,
+      },
+      body: JSON.stringify(obj),
+    }
     );
 
-    let ev = await event_data.json();
-    console.log(ev);
-    if (ev.msg == "TIME sLOT IS NOT AVAILABLE") {
+    let Event = await response.json();
+    if (Event.Created == false) {
       spinner.style.display = "none"; //!Spinner
       swal("Time Slot Not Available", "Please select any other time.", "info");
       return;
     }
-    if (event_data.ok) {
+    if (response.ok) {
       spinner.style.display = "none"; //!Spinner
       swal("Event Created!", "Your Event has been Scheduled.", "success");
       localStorage.setItem("testObject", JSON.stringify(obj));
       setTimeout(() => {
         spinner.style.display = "none"; //!Spinner
-        window.location.assign("./Dashboard.html");
-      }, 1000);
+        window.location.href = "./Dashboard.html";
+      }, 2000);
     } else {
       spinner.style.display = "none"; //!Spinner
       swal("Bad Request!", "Something was wrong", "error");

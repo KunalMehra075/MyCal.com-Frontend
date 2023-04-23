@@ -1,20 +1,35 @@
 var navbar = document.getElementById("sticky");
+let EventBaseURL = `https://my-cal-com-backend.vercel.app`
 var sticky = navbar.offsetTop;
+let spaceNav = document.getElementById("spaceNav")
 let collection = localStorage.getItem("collecton_name");
+
+if (!collection) {
+  swal("Please Login First!", "You need to login before adding any events..", "info");
+  setTimeout(() => {
+    window.location.href = "loginSignup.html"
+  }, 2000);
+}
+
+
 window.onscroll = () => {
   if (window.pageYOffset >= sticky) {
+    spaceNav.style.display = "block"
     navbar.classList.add("sticky");
   } else {
+    spaceNav.style.display = "none"
     navbar.classList.remove("sticky");
   }
 };
 
 let fullnameX = collection.split("@")[0];
+Avatarimg.src = localStorage.getItem("userAvatar")
 CollectionName.innerHTML = fullnameX;
 CollectionName2.innerHTML = fullnameX;
 CollectionName3.innerHTML =
   fullnameX + `<p style="font-size: 12px;">(Logout)</p>`;
 console.log(collection);
+let varName = document.getElementById("idName")
 
 const create = document.getElementById("Create");
 const event_card = document.querySelector("#content>div");
@@ -29,22 +44,21 @@ fetchdata();
 
 async function fetchdata() {
   spinner.style.display = "block"; //!Spinner
+  // console.log(collection);
   try {
-    let alldata = await fetch(
-      `https://impossible-pear-waistcoat.cyclic.app/allevents`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          collection: collection,
-          // Authorization: `${accesstokenAdmin}`,
-        },
-      }
+    let alldata = await fetch(`${EventBaseURL}/events/allevents`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        collection: collection,
+        // Authorization: `${accesstokenAdmin}`,
+      },
+    }
     );
 
     if (alldata.ok) {
       let data = await alldata.json();
-      renderData(data.Data);
+      RenderData(data.Data);
       console.log(data.Data);
     }
   } catch (err) {
@@ -53,7 +67,7 @@ async function fetchdata() {
   }
 }
 
-function renderData(data) {
+function RenderData(data) {
   event_card.innerHTML = "";
   event_card.innerHTML = `${data
     .map((el) => {
@@ -110,7 +124,7 @@ async function deletefun(id) {
   spinner.style.display = "block"; //!Spinner
   try {
     let res = await fetch(
-      `https://impossible-pear-waistcoat.cyclic.app/delete`,
+      `${EventBaseURL}/events/delete`,
       {
         headers: {
           "Content-Type": "application/json",

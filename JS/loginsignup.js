@@ -1,31 +1,27 @@
-const baseUrl = `https://organic-pets-4780-backend.vercel.app`;
+const baseUrl = `https://my-cal-com-backend.vercel.app`;
 const usersUrl = `${baseUrl}/users`;
 const signinUrl = `${usersUrl}/register`;
 const loginUrl = `${usersUrl}/login`;
-const authgoogle = `${baseUrl}/auth/google/callback`;
-async function signup() {
+// const authgoogle = `${baseUrl}/auth/google/callback`;
+
+let SignupForm = document.getElementById("SignupForm")
+SignupForm.addEventListener("submit", (e) => {
+  e.preventDefault()
   spinner.style.display = "block"; //!Spinner
-  checkValues();
-}
-const checkValues = () => {
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
   let cnf_pass = document.getElementById("cnfpass").value;
-
-  let obj = {
-    name: name,
-    email: email,
-    password: password,
-  };
-  if (password == cnf_pass) {
-    Postusers(obj);
-  } else {
+  if (password != cnf_pass) {
     swal("Check Password!", "Passwords dosen't match", "warning");
-    spinner.style.display = "block"; //!Spinner
+    spinner.style.display = "none"; //!Spinner
     return;
   }
-};
+  let userdetails = {
+    name: SignupForm.name.value,
+    email: SignupForm.email.value,
+    password: SignupForm.password.value,
+  };
+  Postusers(userdetails);
+})
 
 async function Postusers(obj) {
   spinner.style.display = "block"; //!Spinner
@@ -51,38 +47,32 @@ async function Postusers(obj) {
   }
 }
 
-async function login() {
+let LoginForm = document.getElementById("LoginForm")
+LoginForm.addEventListener("submit", (e) => {
   spinner.style.display = "block"; //!Spinner
-  check_login_input_values();
-}
+  e.preventDefault()
+  let loginDetails = {
+    email: LoginForm.login_email.value,
+    password: LoginForm.login_pass.value,
+  }
+  console.log(loginDetails);
+  login_user(loginDetails);
+})
 
-function check_login_input_values() {
-  let login_email = document.getElementById("login_email").value;
-  let login_pass = document.getElementById("login_pass").value;
-
-  let login_obj = {
-    email: login_email,
-    password: login_pass,
-  };
-  console.log(login_obj);
-  login_user(login_obj);
-}
 
 let login_user = async (obj) => {
   spinner.style.display = "block"; //!Spinner
-  let res = await fetch(
-    "https://organic-pets-4780-backend.vercel.app/users/login",
-    {
-      method: "POST",
-      body: JSON.stringify(obj),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
+  let res = await fetch(`${baseUrl}/users/login`, {
+    method: "POST",
+    body: JSON.stringify(obj),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
   );
   if (res.ok) {
     let LoginData = await res.json();
-    if (LoginData.msg == "Login failed") {
+    if (LoginData.success == false) {
       swal("Login Failed", "Wrong Credentials", "error");
       spinner.style.display = "none"; //!Spinner
       return;

@@ -1,5 +1,6 @@
 let schduledDateTime = "";
 let userMail = "";
+let EventBaseURL = "https://my-cal-com-backend.vercel.app"
 let collection = localStorage.getItem("collecton_name");
 let fullnameX = collection.split("@")[0];
 CollectionName3.innerHTML =
@@ -8,8 +9,7 @@ console.log(collection);
 
 async function getData() {
   spinner.style.display = "block"; //!Spinner
-  let data = await fetch(
-    "https://impossible-pear-waistcoat.cyclic.app/allevents",
+  let data = await fetch(`${EventBaseURL}/allevents`,
     {
       method: "GET",
       headers: {
@@ -60,9 +60,8 @@ function changeSubjectandBody(data) {
   subjectText.innerText = `Reminder: ${data.title} is at ${data.starttime} on ${data.startdate}`;
   bodyText.textContent = `Hi ${collection.split("@")[0]}, 
 
-This is a friendly reminder that your ${data.title} is at ${
-    data.starttime
-  } on ${data.startdate}`;
+This is a friendly reminder that your ${data.title} is at ${data.starttime
+    } on ${data.startdate}`;
 
   // changing format for geting the difference between two DateTime
 
@@ -81,8 +80,6 @@ let form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
   spinner.style.display = "block"; //!Spinner
   event.preventDefault();
-  // let workflowName = form.name.value;
-  // let userEventsData = JSON.parse(form.userEvents.value);
   let beforeTimeValue = form.beforeTimeValue.value;
   let beforeTimeUnit = form.beforeTimeUnit.value;
   let subjectText = form.subjectText.value;

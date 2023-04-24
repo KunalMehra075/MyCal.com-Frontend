@@ -67,7 +67,7 @@ async function FetchAllUserEvents(UserEmail) {
 
 function RenderData(data) {
   let AllEvents = data.map((item) => {
-    let startDate = item.start.split("T")[0]
+    let startDate = item.start.split("T")[0].split("-").reverse().join("-")
     let time = item.end.split("T")[1]
     let link = item.event_link.split(" ").join("-")
     return `
@@ -78,8 +78,8 @@ function RenderData(data) {
       <hr class="colorHR" style="background-color:${item.color}"/>
       </div>
       <div>
-      <p><span style="color:#075cd4">Date: </span> ${startDate}<br>
-      <p><span style="color:#075cd4">TimeDate: </span> ${time}<br>
+      <p><span style="color:#075cd4">Date: </span> ${startDate} <br>
+      <p><span style="color:#075cd4">Time: </span> ${time}<br>
       <span style="color:#075cd4">Type:</span> ${item.place}</p> 
       <p><span style="font-size:14px;color:#075cd4"> View Booking Data</span></p>
       </div>

@@ -30,7 +30,7 @@ EventForm.addEventListener("submit", (e) => {
   let endTime = EventForm.endtime.value
   let startDate = EventForm.startDate.value
   let endDate = EventForm.endDate.valu
-  let event_link = ` mycal.com/${UserName}/${EventForm.event_link.value.split(" ").join("-")}`
+  let event_link = `/${UserName.split(" ").join("-")}/${EventForm.event_link.value.split(" ").join("-")}`
   let description = EventForm.event_description.value
   let createdOn = new Date().toISOString().split(".")[0]
 

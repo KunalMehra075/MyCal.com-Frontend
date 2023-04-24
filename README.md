@@ -75,7 +75,7 @@ GET     /google/logout            -> Logging out from the session
 
 ```
 
-## 🔷: Here are some screenshots of website :-
+# 🔷: Here are some screenshots of website :-
 
 ### :large_blue_circle: Home Page :-
 
@@ -117,4 +117,4 @@ GET     /google/logout            -> Logging out from the session
 ## ![Workflows](https://user-images.githubusercontent.com/112753481/221465225-a0c9fe15-73c6-4942-9c0d-9bc5f700f2c3.jpg)
 ![workfflow](https://user-images.githubusercontent.com/112753481/233953000-b734e66d-fbdc-4932-8a7b-b58dfdb4f68b.png)
 
-## Thankyou for your Time :raised_hands: :-
+## Thankyou for your Time :raised_hands: 💝 :-

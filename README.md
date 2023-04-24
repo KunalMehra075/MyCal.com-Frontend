@@ -1,12 +1,11 @@
 # MyCal.com-Frontend [Testing Repository]
 
-This is the Frontend part of MyCal.com, original repo here --> https://github.com/jaysukla/organic-pets-4780-
-
 # Introducing MyCal.com
 
 ### ProjectCode - organic-pets-4780-
 
 https://mycal.netlify.app/ --> Clone of Calendly.com
+This is the Frontend of MyCal.com, Backend repo here --> https://github.com/KunalMehra075/MyCal.com-Backend/tree/main
 
 ![MyCalgt](https://user-images.githubusercontent.com/112753481/221043576-4501abd5-d872-4171-b56a-6e27f607fa9a.png)
 
@@ -20,6 +19,61 @@ You can share your availability preferences and meeting location in one click.
 
 This website is fully functional website with all CRUD operations by user .
 They need to go through User Authentication middleware, to perform any interactions
+
+---
+
+# Features :-
+
+- Interactive UI/UX for best customer experiene.
+- Google Auth Login and Signup
+- User can create events and mark them in calendar.
+- Add workflows,get reminders and other Emailing features
+- Transitions & Animations
+
+---
+
+# Tech Stack Used: -
+
+## Frontend
+
+| HTML                                                                                                                           | CSS                                                                                                                            | JavaScript                                                                                                                     | BootStrap                                                                                                                      | Full Calendar.js                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| <img width="75px" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"> | <img width="75px" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png"> | <img width="70px" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png"> | <img width="75px" src="https://user-images.githubusercontent.com/25181517/183898054-b3d693d4-dafb-4808-a509-bab54cf5de34.png"> | <img width="75px" src="https://user-images.githubusercontent.com/112753481/233935786-0e96b087-6f65-4591-8ce2-a8f57aced31e.png"> |
+
+## Backend : -
+
+| Node.js                                                                                                                         | Express.js                                                                                                                      | MongoDB                                                                                                       | Passport                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| <img width="70px" src="https://user-images.githubusercontent.com/112753481/229047696-de3bf177-16a0-4161-a140-dd89e4fe7b22.png"> | <img width="75px" src="https://user-images.githubusercontent.com/112753481/229164589-4e724000-542d-4deb-9e11-cca7739c2b01.png"> | <img width="75px" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_logo_icon_146424.png"> | <img width="75px" src="https://user-images.githubusercontent.com/112753481/233825866-91f342c0-f567-4f9f-af03-e9acc86a784d.png"> |
+
+---
+
+# Routes :-
+
+```
+Users Routes
+GET      /users                   -> Getting All the Users,
+POST     /users/register          -> Register New User (Requires user details in req.body)
+POST     /users/login             -> Login existing user (Requires email and passwords, returns token if login success)
+
+Events Routes
+GET      /events/allevents        -> Getting All the Events,
+POST     /events/newevent         -> Create a new Event,
+DELETE   /events/delete/:id       -> Delete an Event,
+PATCH    /events/update/:id       -> Update an Event,
+
+Workflows Routes
+GET      /workflows               -> Getting All Workflows
+POST     /workflows/create        -> Add a Workflow/Reminder
+
+Google Routes
+GET     /google                   -> Initiating Google Auth
+GET     /google/callback          -> Redirect URI
+GET     /google/login             -> Getting User Data after Google Authentication
+GET     /google/logout            -> Logging out from the session
+
+
+```
 
 ## Here are some screenshots of website.
 

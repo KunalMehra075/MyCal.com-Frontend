@@ -76,7 +76,6 @@ let Events = [
         start: '2023-04-28'
     }
 ]
-document.addEventListener("DOMContentLoaded", RenderCalendar(Events));
 function RenderCalendar(Events) {
     var calendarEl = document.getElementById('calendar');
     let currentDate = new Date().toISOString().split(".")[0].split("T")[0]

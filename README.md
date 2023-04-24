@@ -1,11 +1,11 @@
-# MyCal.com-Frontend [Testing Repository]
+# MyCal.com-Frontend
 
 # Introducing MyCal.com
+(Clone of Calendly.com)
+Link : -https://mycal.netlify.app/ 
 
-### ProjectCode - organic-pets-4780-
-
-https://mycal.netlify.app/ --> Clone of Calendly.com
-This is the Frontend of MyCal.com, Backend repo here --> https://github.com/KunalMehra075/MyCal.com-Backend/tree/main
+This is the Frontend Repository of MyCal.com,
+Backend repo here --> https://github.com/KunalMehra075/MyCal.com-Backend/tree/main
 
 ![MyCalgt](https://user-images.githubusercontent.com/112753481/221043576-4501abd5-d872-4171-b56a-6e27f607fa9a.png)
 
@@ -75,7 +75,7 @@ GET     /google/logout            -> Logging out from the session
 
 ```
 
-## Here are some screenshots of website.
+## 🔷: Here are some screenshots of website :-
 
 ### :large_blue_circle: Home Page :-
 

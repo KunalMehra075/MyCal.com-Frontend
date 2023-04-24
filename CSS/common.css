@@ -24,3 +24,8 @@ input {
   background-color: red;
   height: 100px;
 }
+#Logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

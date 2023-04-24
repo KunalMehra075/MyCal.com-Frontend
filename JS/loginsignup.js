@@ -1,8 +1,11 @@
-const baseUrl = `https://my-cal-com-backend.vercel.app`;
-const usersUrl = `${baseUrl}/users`;
+
+
+
+const EventBaseURL = `https://my-cal-com-backend.vercel.app`;
+
+const usersUrl = `${EventBaseURL}/users`;
 const signinUrl = `${usersUrl}/register`;
 const loginUrl = `${usersUrl}/login`;
-// const authgoogle = `${baseUrl}/auth/google/callback`;
 
 let SignupForm = document.getElementById("SignupForm")
 SignupForm.addEventListener("submit", (e) => {
@@ -62,7 +65,7 @@ LoginForm.addEventListener("submit", (e) => {
 
 let login_user = async (obj) => {
   spinner.style.display = "block"; //!Spinner
-  let res = await fetch(`${baseUrl}/users/login`, {
+  let res = await fetch(`${EventBaseURL}/users/login`, {
     method: "POST",
     body: JSON.stringify(obj),
     headers: {
@@ -77,10 +80,10 @@ let login_user = async (obj) => {
       spinner.style.display = "none"; //!Spinner
       return;
     }
-
+    // console.log(LoginData);
     localStorage.setItem("accessToken", LoginData.token);
     localStorage.setItem("username", LoginData.name);
-    localStorage.setItem("collecton_name", LoginData.email);
+    localStorage.setItem("useremail", LoginData.email);
 
     if (LoginData.token) {
       spinner.style.display = "none"; //!Spinner

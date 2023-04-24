@@ -10,6 +10,19 @@
   display: flex;
   align-items: center;
 }
+.colorHR {
+  border: none;
+  position: absolute;
+  transform: translateZ(20deg);
+  height: 95%;
+  width: 5px;
+  top: 10px;
+  left: 12px;
+  opacity: 0.7;
+}
+:root {
+  --BlueColor: #0069ff;
+}
 body {
   margin-bottom: 200px !important;
 }
@@ -77,7 +90,10 @@ a {
   display: none;
 }
 /* ----------------top nav----------------- */
-
+.swal-button--cancel {
+  background: grey !important;
+  color: white !important;
+}
 #topnav {
   width: 80%;
   display: flex;
@@ -115,6 +131,7 @@ a {
 /* ------------------body--------------- */
 
 #sticky {
+  z-index: 4;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 15px 20px -20px;
   padding-bottom: 1.5rem;
   background-color: white;
@@ -157,6 +174,7 @@ a {
 
 #topBody > div:nth-child(1) > div > p {
   margin-bottom: 0.3rem;
+  font-size: 23px;
 }
 #spinner {
   display: none;
@@ -206,8 +224,10 @@ a {
   flex-wrap: wrap;
 }
 #event_card {
+  position: relative;
   width: 30%;
   padding: 1rem;
+  padding-left: 2rem;
   border-radius: 10px;
   margin: 20px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,

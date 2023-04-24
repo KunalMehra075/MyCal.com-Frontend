@@ -1,3 +1,6 @@
+
+const EventBaseURL = "https://my-cal-com-backend.vercel.app"
+
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
@@ -20,9 +23,8 @@ if (params.successId) {
     }
 }
 async function GoogleLoginFunction(id) {
-    let baseURL = "https://my-cal-com-backend.vercel.app";
     try {
-        let res = await fetch(`${baseURL}/google/login`, {
+        let res = await fetch(`${EventBaseURL}/google/login`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
@@ -38,7 +40,7 @@ async function GoogleLoginFunction(id) {
             localStorage.setItem("accessToken", response.token);
             localStorage.setItem("username", response.user.name);
             localStorage.setItem("userAvatar", response.user.image);
-            localStorage.setItem("collecton_name", response.user.email);
+            localStorage.setItem("useremail", response.user.email);
             swal("Login Successful!", "You are logged in, Lets Explore!", "success");
             setTimeout(() => {
                 window.location.href = "Dashboard.html";

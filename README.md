@@ -1,11 +1,10 @@
 # MyCal.com-Frontend
 
-# Introducing MyCal.com <br/>
-(Clone of Calendly.com)
-Link : -https://mycal.netlify.app/ 
+# Introducing MyCal.com  (Clone of Calendly.com)
+- Link : -https://mycal.netlify.app/ 
 
-This is the Frontend Repository of MyCal.com,
-Backend repo here --> https://github.com/KunalMehra075/MyCal.com-Backend/tree/main
+- This is the Frontend Repository of MyCal.com,
+- Backend repo here --> https://github.com/KunalMehra075/MyCal.com-Backend/tree/main
 
 ![MyCalgt](https://user-images.githubusercontent.com/112753481/221043576-4501abd5-d872-4171-b56a-6e27f607fa9a.png)
 

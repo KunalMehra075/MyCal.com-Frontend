@@ -33,9 +33,22 @@ let Events = [
         start: '2023-04-01'
     },
     {
-        title: 'Long Event',
+        title: 'Company Long Event',
         start: '2023-04-07',
-        end: '2023-04-10'
+        end: '2023-04-10',
+        color: "red"
+    },
+    {
+        title: 'Race Event',
+        start: '2023-04-11',
+        end: '2023-04-12',
+        color: "green"
+    },
+    {
+        title: 'Thanks-giving Event',
+        start: '2023-04-14',
+        end: '2023-04-16',
+        color: "gold"
     },
     {
         groupId: '999',
@@ -67,6 +80,11 @@ let Events = [
         start: '2023-04-12T14:30:00'
     },
     {
+        title: 'Google Meet',
+        start: '2023-04-15T14:30:00',
+        color: "gold"
+    },
+    {
         title: 'Birthday Party',
         start: '2023-04-13T07:00:00'
     },
@@ -76,6 +94,7 @@ let Events = [
         start: '2023-04-28'
     }
 ]
+// RenderCalendar(Events)
 function RenderCalendar(Events) {
     var calendarEl = document.getElementById('calendar');
     let currentDate = new Date().toISOString().split(".")[0].split("T")[0]

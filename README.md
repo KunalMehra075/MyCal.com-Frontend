@@ -89,23 +89,32 @@ GET     /google/logout            -> Logging out from the session
 ![Product page](https://user-images.githubusercontent.com/112753481/221465069-ae44c81d-0b89-4e85-a478-975841a5afd1.jpg)
 
 ### :large_blue_circle: Login/Signup Page :-
+![signup](https://user-images.githubusercontent.com/112753481/233952458-6a343629-cd5a-4a92-946d-b633a1a5a057.png)
+![login](https://user-images.githubusercontent.com/112753481/233952469-9e1ad7c0-5963-4653-97b9-2ed389bbf87f.png)
 
-![Signup page](https://user-images.githubusercontent.com/112753481/221465101-ad49c085-0be7-4349-aa7a-92bfb864ff71.jpg)
-![Login](https://user-images.githubusercontent.com/112753481/221465108-166ac75c-34ce-4785-b43e-545c0b8b9796.jpg)
+### :large_blue_circle: Google Auth:-
+![Googleauth](https://user-images.githubusercontent.com/112753481/233952575-e5138872-988f-4978-a901-8ca9bb6699e8.png)
+
 
 ### :large_blue_circle: User Dashboard :-
+![Dashboard](https://user-images.githubusercontent.com/112753481/233952618-399a8042-5bf5-40c2-94e8-c40d9ca440c0.png)
 
-![Dashboard](https://user-images.githubusercontent.com/112753481/221465797-ef26c399-7d1b-433b-9068-2f51e326356e.jpg)
+### :large_blue_circle: Calendar Page :-
+- Month View
+![calendar2](https://user-images.githubusercontent.com/112753481/233952783-9916da98-ecbe-4df5-be45-140e3ae235d4.png)
+- Week View
+![calendarweekview](https://user-images.githubusercontent.com/112753481/233952891-013ac27e-cbad-430c-b3b5-a405dbf01062.png)
+
 
 ### :large_blue_circle: Create Events Page :-
+![addeventone](https://user-images.githubusercontent.com/112753481/233952962-4da20910-9e4a-427e-988d-05da1e176898.png)
+![addevent2](https://user-images.githubusercontent.com/112753481/233952975-8fca4b4a-0a5c-494e-a043-48cbf40068dd.png)
 
-![Create Event](https://user-images.githubusercontent.com/112753481/221465150-7e826a67-da87-4ffa-94ac-df0ba206cbca.jpg)
-![Create Event 2](https://user-images.githubusercontent.com/112753481/221465155-25d03782-a84d-4f65-81b3-cf6b58977df5.jpg)
+
 
 ### :large_blue_circle: Create Workflows Page :-
 
 ## ![Workflows](https://user-images.githubusercontent.com/112753481/221465225-a0c9fe15-73c6-4942-9c0d-9bc5f700f2c3.jpg)
-
-![last](https://user-images.githubusercontent.com/112753481/221465312-e578fe88-d1ea-40cb-bc8d-2324c1a7506c.jpg)
+![workfflow](https://user-images.githubusercontent.com/112753481/233953000-b734e66d-fbdc-4932-8a7b-b58dfdb4f68b.png)
 
 ## Thankyou for your Time :raised_hands: :-

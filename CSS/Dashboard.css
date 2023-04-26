@@ -202,7 +202,7 @@ a {
   width: 2%;
 }
 #topBody > div:nth-child(2) > div:nth-child(2) > img {
-  width: 100%;
+  width: 25px;
 }
 
 .Deleter {

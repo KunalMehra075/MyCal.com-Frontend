@@ -6,12 +6,12 @@ var sticky = navbar.offsetTop;
 let spaceNav = document.getElementById("spaceNav")
 let UserEmail = localStorage.getItem("useremail");
 
-if (!UserEmail) {
-  swal("Please Login First!", "You need to login before adding any events..", "info");
-  setTimeout(() => {
-    window.location.href = "loginSignup.html"
-  }, 2000);
-}
+// if (!UserEmail) {
+//   swal("Please Login First!", "You need to login before adding any events..", "info");
+//   setTimeout(() => {
+//     window.location.href = "loginSignup.html"
+//   }, 2000);
+// }
 
 
 window.onscroll = () => {

@@ -324,7 +324,10 @@ a {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 577px) {
+@media screen and (min-width: 200px) and (max-width: 577px) {
+  * {
+    font-size: 10px;
+  }
   #navbar > div img {
     width: 90%;
   }
@@ -356,26 +359,74 @@ a {
     width: 7%;
   }
   #botnav {
-    position: relative;
-    overflow: hidden;
-    width: 85%;
+    width: 100%;
     margin: auto;
-    padding: 5% 0;
+    padding: 4px;
   }
   #botnav > ul {
     display: flex;
-    overflow-x: auto;
+    justify-content: space-around !important;
+    padding: 0px 2px;
     scroll-behavior: smooth;
   }
-  #botnav > ul > ::-webkit-scrollbar {
-    display: none;
-  }
   #botnav > ul > li {
-    flex: 0 0 auto;
-    width: 40%;
-    justify-content: space-between;
+    padding: 0px !important;
   }
   #event_card {
     width: 80%;
+  }
+
+  #topBody > div {
+    width: 100% !important;
+  }
+  #topnav {
+    width: 100%;
+    padding: 5px 10px;
+  }
+  #topBody > div:nth-child(1) {
+    flex-direction: column;
+  }
+  #topnav > p:nth-child(1) {
+    font-size: 17px;
+  }
+  #navbar > div img {
+    width: 120px;
+  }
+  #navbar > div:nth-child(1) {
+    width: 40%;
+  }
+  #UserShow3 {
+    font-size: 10px !important;
+  }
+  #navbar {
+    width: 100%;
+    padding: 7px;
+  }
+  #Create {
+    text-align: center;
+    padding: 5px 7px;
+    font-size: 10px !important;
+  }
+  #Avatarimg {
+    width: 90px;
+    margin: 0px;
+  }
+  #topBody > div:nth-child(1) > div > p,
+  #topBody > div:nth-child(1) > div > a {
+    font-size: 13px;
+  }
+  #topBody > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #topBody > div:nth-child(2) > div {
+    width: 80%;
+  }
+  #topBody > div:nth-child(2) > div:nth-child(2) {
+    width: fit-content;
+  }
+  #content > h2 {
+    font-size: 13px;
   }
 }

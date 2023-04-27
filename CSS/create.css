@@ -331,8 +331,8 @@ select {
   .bot {
     margin: 4px;
   }
-  #NextButtonW,
-  #CancelButtonW {
+  .next_cancel #NextButtonW,
+  .next_cancel #CancelButtonW {
     padding: 7px 22px;
   }
 }

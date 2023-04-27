@@ -326,6 +326,13 @@ select {
   }
 
   .next_cancel {
-    width: 40% !important;
+    width: 90% !important;
+  }
+  .bot {
+    margin: 4px;
+  }
+  #NextButtonW,
+  #CancelButtonW {
+    padding: 7px 22px;
   }
 }

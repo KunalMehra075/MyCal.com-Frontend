@@ -307,7 +307,7 @@ input[type="submit"]:hover {
     gap: 00px;
   }
   .brand {
-    margin: 8px 0px;
+    margin: 2px 0px;
     display: flex;
     justify-content: center;
     align-items: center;

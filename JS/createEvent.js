@@ -178,11 +178,9 @@ EventForm.event_description.addEventListener("input", (e) => {
 
 let Logout = document.getElementsByClassName("namecircle")[0];
 Logout.addEventListener("click", () => {
-  spinner.style.display = "flex"; //!Spinner
   swal("Logging Out..", "", "info");
   localStorage.clear();
   setTimeout(() => {
-    spinner.style.display = "none"; //!Spinner
     window.location.href = "./index.html";
   }, 1000);
 });

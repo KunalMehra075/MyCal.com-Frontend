@@ -48,4 +48,16 @@ input {
   #spinner > img {
     width: 80px !important;
   }
+  #SuccessPage {
+    height: 80vh !important;
+  }
+  .SuccessPageButtonsHolder h1 {
+    font-size: 21px !important;
+  }
+  #orangegoogle > div > p {
+    font-size: 14px;
+  }
+  #orangegoogle > div > img {
+    width: 100px !important;
+  }
 }

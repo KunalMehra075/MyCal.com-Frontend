@@ -135,3 +135,14 @@ function RenderCalendar(Events) {
 let fullnameX = UserEmail.split("@")[0];
 let UserShow3 = document.getElementById("UserShow3")
 UserShow3.innerHTML = fullnameX
+
+
+//? <!----------------------------------------------- < Logout> ----------------------------------------------->
+let Logout = document.getElementsByClassName("namecircle")[0];
+Logout.addEventListener("click", () => {
+    swal("Logging Out..", "", "info");
+    localStorage.clear();
+    setTimeout(() => {
+        window.location.href = "./index.html";
+    }, 1000);
+});

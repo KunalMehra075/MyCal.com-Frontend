@@ -411,11 +411,16 @@ a {
   #Avatarimg {
     width: 95px;
     margin: 0px;
+    margin-right: 10px;
   }
   #topBody > div:nth-child(1) > div > p,
   #topBody > div:nth-child(1) > div > a,
   #UserShow2 {
     font-size: 13px;
+  }
+  #UserShow {
+    font-size: 20px;
+    font-weight: 500;
   }
   #topBody > div {
     display: flex;

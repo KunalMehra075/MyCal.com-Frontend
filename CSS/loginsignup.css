@@ -299,3 +299,30 @@ input[type="submit"]:hover {
 #fbbom {
   transform: translateY(-2px);
 }
+/*todo ----------------------------Small Screen Sizes -------------------------------- */
+@media all and (min-width: 200px) and (max-width: 809px) {
+  .parent {
+    flex-direction: column-reverse !important;
+    align-items: center;
+    gap: 00px;
+  }
+  .brand {
+    margin: 8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    box-shadow: none;
+    margin-bottom: 40px;
+  }
+
+  .main {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  #socialX > a {
+    box-shadow: none;
+    background-color: white !important;
+  }
+}

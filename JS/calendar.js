@@ -1,10 +1,22 @@
 
 let EventBaseURL = `https://my-cal-com-backend.vercel.app`
+
+//! IF USER NOT PRESENT ---> 
 let UserEmail = localStorage.getItem("useremail");
+
+if (!UserEmail) {
+    swal("Please Login First!", "You need to login before adding any events..", "info");
+    setTimeout(() => {
+        window.location.href = "loginSignup.html"
+    }, 2000);
+}
+//! ---------------------->
+
+
 FetchAllUserEvents(UserEmail);
 
 async function FetchAllUserEvents(UserEmail) {
-    spinner.style.display = "block"; //!Spinner
+    spinner.style.display = "flex"; //!Spinner
 
     try {
         let response = await fetch(`${EventBaseURL}/events/allevents?userEmail=${UserEmail}`, {
@@ -21,13 +33,14 @@ async function FetchAllUserEvents(UserEmail) {
             spinner.style.display = "none"; //!Spinner
         }
     } catch (err) {
-        spinner.style.display = "none"; //!Spinner
+        RenderCalendar([])
         console.log(err);
+        spinner.style.display = "none"; //!Spinner
     }
 }
 
 
-let Events = [
+let DummyEvents = [
     {
         title: 'All Day Event',
         start: '2023-04-01'
@@ -96,6 +109,9 @@ let Events = [
 ]
 // RenderCalendar(Events)
 function RenderCalendar(Events) {
+    spinner.style.display = "flex"; //!Spinner
+    if (Events.length == 0) Events = DummyEvents
+
     var calendarEl = document.getElementById('calendar');
     let currentDate = new Date().toISOString().split(".")[0].split("T")[0]
     var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -110,6 +126,7 @@ function RenderCalendar(Events) {
     });
 
     calendar.render();
+    spinner.style.display = "none"; //!Spinner
 }
 
 

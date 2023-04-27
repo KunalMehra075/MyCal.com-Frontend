@@ -192,6 +192,9 @@ nav {
   .footerthird > b {
     font-size: 7px;
   }
+  #SuccessPage {
+    height: 78vh;
+  }
   .Introduction {
     margin-top: 15px;
     white-space: normal;

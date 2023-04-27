@@ -1,7 +1,25 @@
 let EventBaseURL = `https://my-cal-com-backend.vercel.app`
 
+//! IF USER NOT PRESENT ---> 
+let UserEmail = localStorage.getItem("useremail");
+
+if (!UserEmail) {
+  swal("Please Login First!", "You need to login before adding any events..", "info");
+  setTimeout(() => {
+    window.location.href = "loginSignup.html"
+  }, 2000);
+}
+//! ---------------------->
+
+let fullnameX = UserEmail.split("@")[0];
+let UserName = localStorage.getItem("username");
+
+UserShow3.innerHTML = fullnameX + `<p style="font-size: 12px;">(Logout)</p>`;
+// console.log(UserEmail);//!-->Consoling current user Email
+
 var navbar = document.getElementById("event_nav");
 var sticky = navbar.offsetTop;
+
 window.onscroll = function () {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
@@ -9,15 +27,7 @@ window.onscroll = function () {
     navbar.classList.remove("sticky");
   }
 };
-const cancelbutton = document.querySelectorAll(".cancelbutton");
 
-let UserEmail = localStorage.getItem("useremail");
-let UserName = localStorage.getItem("username");
-let fullnameX = UserEmail.split("@")[0];
-
-UserShow3.innerHTML =
-  fullnameX + `<p style="font-size: 12px;">(Logout)</p>`;
-console.log(UserEmail);//!-->Consoling current user Email
 
 let EventForm = document.getElementById("EventForm")
 
@@ -93,6 +103,10 @@ async function CreateEvent(event) {
     console.log(error)
   }
 }
+
+
+
+const cancelbutton = document.querySelectorAll(".cancelbutton");
 for (let i = 0; i < cancelbutton.length; i++) {
   cancelbutton[i].addEventListener("click", async () => {
     spinner.style.display = "none"; //!Spinner
@@ -164,7 +178,7 @@ EventForm.event_description.addEventListener("input", (e) => {
 
 let Logout = document.getElementsByClassName("namecircle")[0];
 Logout.addEventListener("click", () => {
-  spinner.style.display = "block"; //!Spinner
+  spinner.style.display = "flex"; //!Spinner
   swal("Logging Out..", "", "info");
   localStorage.clear();
   setTimeout(() => {

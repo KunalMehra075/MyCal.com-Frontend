@@ -383,9 +383,10 @@ a {
     width: 100%;
     padding: 5px 10px;
   }
-  #topBody > div:nth-child(1) {
-    flex-direction: column;
+  #UserShow {
+    font-size: 19px;
   }
+
   #topnav > p:nth-child(1) {
     font-size: 17px;
   }
@@ -404,15 +405,16 @@ a {
   }
   #Create {
     text-align: center;
-    padding: 5px 7px;
-    font-size: 10px !important;
+    padding: 7px 13px;
+    font-size: 12px !important;
   }
   #Avatarimg {
-    width: 90px;
+    width: 95px;
     margin: 0px;
   }
   #topBody > div:nth-child(1) > div > p,
-  #topBody > div:nth-child(1) > div > a {
+  #topBody > div:nth-child(1) > div > a,
+  #UserShow2 {
     font-size: 13px;
   }
   #topBody > div {
@@ -428,5 +430,15 @@ a {
   }
   #content > h2 {
     font-size: 13px;
+  }
+  #event_card > div:nth-child(1) > p {
+    font-size: 2.2rem;
+  }
+  #event_card {
+    width: 93%;
+    margin: 10px;
+  }
+  #link > a {
+    font-size: 12px !important;
   }
 }

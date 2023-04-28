@@ -9,12 +9,12 @@ if (params.successId) {
     let Auth = params.Auth
     console.log(params)
     let container = document.getElementById("SuccessPage")
-    if (Auth == "Google") {
+    if (Auth == "Facebook") {
         container.innerHTML = `
         <div id="greentickholder"></div>
         <div id="orangegoogle">
           <div class="SuccessPageButtonsHolder">
-            <img width="150px" src="Images/googlepng.png" alt="" />
+            <img width="180px" src="Images/facebook.png" alt="" />
             <h1 style="font-size: 30px; font-weight: 500">
               Authentication Successful
             </h1>
@@ -29,7 +29,7 @@ if (params.successId) {
         <div id="greentickholder"></div>
         <div id="orangegoogle">
           <div class="SuccessPageButtonsHolder">
-            <img width="150px" src="Images/facebook.png" alt="" />
+            <img width="150px" src="Images/googlepng.png" alt="" />
             <h1 style="font-size: 30px; font-weight: 500">
               Authentication Successful
             </h1>

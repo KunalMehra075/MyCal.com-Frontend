@@ -6,7 +6,8 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 if (params.successId) {
     let id = params.successId.trim().split(`"`)[1];
-    let Auth = params.Auth.trim().split(`"`)[1]
+    let Auth = params.Auth
+    console.log(params)
     let container = document.getElementById("SuccessPage")
     if (Auth == "Google") {
         container.innerHTML = `

@@ -56,7 +56,7 @@ if (params.successId) {
 }
 async function GetUserByID(id) {
     try {
-        let res = await fetch(`${EventBaseURL}/users/:id`);
+        let res = await fetch(`${EventBaseURL}/users/${id}`);
 
         let response = await res.json();
         console.log(response);
